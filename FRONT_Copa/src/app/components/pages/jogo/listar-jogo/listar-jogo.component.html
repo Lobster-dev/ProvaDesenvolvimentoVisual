@@ -1,0 +1,41 @@
+<mat-card class="container">
+  <mat-card-header>
+    <mat-card-title> Listar Jogos </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <table>
+      <!-- Cabeçalho com os index da tabela-->
+      <tr>
+        <th>
+          Seleção 1
+        </th>
+        <th>
+          Placar
+        </th>
+        <th>
+          <!-- Aqui será a coluna que ficara o X no placar-->
+        </th>
+        <th>
+          Placar
+        </th>
+        <th>
+          Seleção 2
+        </th>
+        <th>
+          Palpitar
+        </th>
+      </tr>
+
+      <!-- Conteudo da tabela-->
+      <tr *ngFor="let jogo of jogos">
+        <td>{{jogo.selecaoA?.nome}}</td>
+        <td>{{jogo.placarTimeA}}</td>
+        <td>x</td>
+        <td>{{jogo.placarTimeB}}</td>
+        <td>{{jogo.selecaoB?.nome}}</td>
+        <td><a routerLink="/pages/jogo/palpitar/{{ jogo.id }}">Palpitar</a></td>
+      </tr>
+
+    </table>
+  </mat-card-content>
+</mat-card>

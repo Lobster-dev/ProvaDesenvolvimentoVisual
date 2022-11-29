@@ -1,0 +1,39 @@
+<mat-card class="container">
+  <mat-card-header>
+    <mat-card-title> Palpitar Jogo </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+    <mat-form-field class="input" id="nome">
+      <mat-label for="selecaoB">{{selecaoA}}</mat-label>
+      <input matInput type="text" name="selecaoB" disabled=""/> <!--campo com o nome do time A fixo--> 
+    </mat-form-field>
+
+    <mat-form-field class="input" id="nome">
+      <mat-label for="selecaoB">Palpite seleção</mat-label>
+      <input matInput type="number" name="palpiteA" [(ngModel)]="palpiteA" /> 
+    </mat-form-field>
+
+    <mat-form-field class="input" id="nome">
+      <mat-label for="selecaoB">{{selecaoB}}</mat-label>
+      <input matInput type="text" name="selecaoB" disabled /> <!--campo com o nome do time B fixo--> 
+    </mat-form-field>
+
+    <mat-form-field class="input" id="nome">
+      <mat-label for="selecaoB">Palpite seleção</mat-label>
+      <input matInput type="number" name="palpiteA" [(ngModel)]="palpiteB"/>
+    </mat-form-field>
+
+
+  </mat-card-content>
+
+
+  <button
+    mat-raised-button
+    color="warn"
+    id="btnCadastrar"
+    (click)="alterar()"
+  >
+    Fazer o Palpite
+  </button>
+</mat-card>
